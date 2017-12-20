@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="public/css/login.css">
+</head>
+<body ng-con>-->
+<div>
+<h2>Login Form</h2> 
+
+<form>
+  <!-- <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+  </div>
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" ng-model="userName" name="uname">
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" ng-model="pwd" name="psw">
+        
+    <button type="submit" ng-click = loginUser(uname,pwd)>Login</button>
+    <button type="submit" ng-click = signUp()>Register</button>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+</div>
+<!-- <script src="bower_components/angular/angular.min.js"></script>
+   <script src="bower_components/angular-route/angular-route.min.js"></script>
+   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="public/js/register.js"></script> -->
+<!-- </body>
+</html> -->
+

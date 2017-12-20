@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Angular APP</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="public/css/style.css">
+</head>
+<body> -->
+  <div ng-controller="signup">
+<h2><center>Signup Form</center></h2>
+
+<form name="user" style="border:1px solid #ccc">
+  <div class="container">
+    <label><b>First Name</b></label>
+    <input type="text" placeholder="First Name" ng-model="firstname" required>
+
+    <label><b>Last Name</b></label>
+    <input type="text" placeholder="Last Name" ng-model="lastname" required>
+
+     <label><b>Email<span style="color:Red" ng-show="user.email.$error.required"> * </span></b></label>
+    <input type="text" name="email" placeholder="Enter Email" ng-model="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required>
+
+    
+<span style="color:Red" ng-show="user.email.$dirty&&user.email.$error.pattern">Please Enter Valid Email</span>
+ 
+     <br>
+     <label><b>Phone<span style="color:Red" ng-show="user.phnumber.$error.required"> * </span></b></label>
+    <input type="text" name="phnumber" placeholder="Enter Phone Number" ng-model="phone" ng-pattern="/^[0-9]{1,10}$/" required>
+    <span style="color:Red" ng-show="user.phnumber.$error.pattern">Only Numbers Allowed, Maximum 10 Characters</span>
+     <br>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" ng-model="pwd" required>
+
+    <label><b>Confirm Password</b></label>
+    <input type="password" placeholder="Confirm Password" ng-model="confirmpwd" required>
+    <span style="color:Red" ng-show="pwd != confirmpwd">Password mismatch</span>
+    <br>
+    <input type="checkbox" checked="checked"> Remember me
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <div class="clearfix"> 
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" ng-disabled = "pwd != confirmpwd" ng-click="login(firstname,lastname,pwd,confirmpwd,email,phone)" class="signupbtn">Sign Up</button>  
+    </div>
+  </div>
+</form>
+</div>
+
+<!-- <script src="bower_components/angular/angular.min.js"></script>
+   <script src="bower_components/angular-route/angular-route.min.js"></script>
+   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="public/js/register.js"></script> -->
+<!-- </body>
+</html> -->
